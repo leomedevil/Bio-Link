@@ -113,6 +113,10 @@ section{
     height: 150px;
     background-color: var(--color-primario);
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .fotoPerfil{
     position: absolute;
@@ -149,6 +153,7 @@ section{
 }
 .conteinerRedes>a>div>img:hover{
     background-color: #d5d2d2;
+    scale: 1.1;
 
 }
 
