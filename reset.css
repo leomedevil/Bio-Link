@@ -1,0 +1,229 @@
+
+:root{
+    --color-primario:#F5F5F5;
+    --color-secundario: #000;
+    --color-terciario: ;
+    --color-cuarto: ;
+    --color-quinto: ;
+    
+}
+
+*{
+    box-sizing:border-box;/*Calcula los borde margin y pading de de la caja*/
+    min-width:0px;/*areglar desvordamiento de grid y flex*/
+    
+}
+::selection{
+    color:var(--color-primario) ;
+    background-color: var(--color-secundario);
+}
+
+body{
+    margin: 0; 
+    display: grid;
+    place-items: center;    
+    min-height: 100vh;/* maximo tamaño de pantalla arregla el calculo de cuando sale el teclado */        
+}
+        
+ h1,h2 ,h3{
+    padding: 0;
+    margin: 0;
+    text-wrap: balance;/* ajusta los titulos*/
+}
+
+p{
+    padding: 0;
+    margin: 0;
+    text-wrap:pretty;/*ajusta los textos*/
+}
+
+header{
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+.letras{
+    position: absolute;
+    top: 0;
+    height: 200px;
+    z-index: -1;
+    background-color: var(--color-primario);
+    font-family: "Anton", sans-serif;
+    font-size: 80px;
+    text-wrap: nowrap;
+    animation: boot 20s alternate-reverse infinite;
+
+}
+.letrasDOS{
+    position: absolute;
+    top: 100px;
+    height: 200px;
+    z-index: -1;
+    font-family: "Anton", sans-serif;
+    font-size: 80px;
+    text-wrap: nowrap;
+    -webkit-text-stroke: #2C2930 1px;
+    animation: top 20s alternate-reverse infinite;
+}
+
+@keyframes top {
+    0%{
+    }
+    75%{
+/*         filter: blur(1px);
+ */    }
+    100%{
+        transform: translateX(1000px);
+    }
+}
+
+@keyframes boot {
+    0%{
+        transform: translateX(1000px);
+    }
+    25%{
+/*         filter: blur(.5px);
+ */    }
+    100%{
+    }
+}
+
+
+/* Main */
+
+main{
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    background-color:var(--color-secundario);
+
+}
+
+section{
+    width: 100%;
+    display: grid;
+    place-items: center;
+
+}
+.section01{
+    height: 150px;
+    background-color: var(--color-primario);
+    margin-top: 20px;
+}
+.fotoPerfil{
+    position: absolute;
+    top: -70px;
+    height: 100px;
+    width: 100px;
+    border: solid 5px var(--color-secundario);
+    background-image: url(/assets/img/perfil.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+
+.descriotion{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+.conteinerRedes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conteinerRedes>a>div{
+    width: 44px;
+}
+.conteinerRedes>a>div>img{
+    width: 40px;
+    border-radius: 50%;
+
+}
+.conteinerRedes>a>div>img:hover{
+    background-color: #d5d2d2;
+
+}
+
+.link{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+}
+
+
+.link>a{
+    text-align: center;
+    width: 200px;
+    margin-bottom: .5rem;
+    padding: 1rem;
+    background-color:;
+    border: solid ;
+    border-radius: 5rem;
+    text-decoration: none;
+    color: aliceblue;
+}
+.link>a:hover{
+    background-color: red;
+}
+
+/*QR*/
+
+.card{
+    position: relative;
+    height: 200px;
+    width: 400px;
+    margin-top: 50px;
+    background-color: var(--color-primario);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.card::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 200px;
+    width: 200px;
+    background-color: var(--color-secundario);
+}
+.cardUno{
+    text-align: center;
+    width: 100%;
+}
+.cardUno>strong{
+    font-size: 40px;
+}
+.cardDos{
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+.cardDos>img{
+    height: 8rem;
+    filter: invert(1);
+}
+
+.info{
+    margin: 20px;
+    text-align: center;
+}
+
+/* Footer */
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:var(--color-primario) ;
+}
