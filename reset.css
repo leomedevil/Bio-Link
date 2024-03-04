@@ -1,10 +1,10 @@
 
 :root{
-    --color-primario:#F5F5F5;
-    --color-secundario: #000;
-    --color-terciario:#d5d2d2 ;
-    --color-cuarto: ;
-    --color-quinto: ;
+    --color-primario:#455633;
+    --color-secundario:#8D9C63 ;
+    --color-terciario:#C2D2B0 ;
+    --color-cuarto:#101916 ;
+    --color-quinto: #E9EEEA;
     
 }
 
@@ -44,17 +44,17 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 200px;
+    justify-content: end;
+    height: 300px;
     width: 100%;
     font-size: 50px;
+    color: var(--color-terciario);
     overflow: hidden;
 }
 .letras{
     position: absolute;
     top: 0;
     height: 200px;
-    z-index: -1;
     font-family: "Anton", sans-serif;
     text-wrap: nowrap;
     animation: boot 20s  infinite;
@@ -62,13 +62,20 @@ header{
 }
 .letrasDOS{
     position: absolute;
-    top: 100px;
+    top: 70px;
     height: 200px;
-    z-index: -1;
     font-family: "Anton", sans-serif;
     text-wrap: nowrap;
-    -webkit-text-stroke: #2C2930 1px;
     animation: top 20s  infinite;
+}
+.letrasTres{
+    position: absolute;
+    top: 130px;
+    height: 200px;
+    font-family: "Anton", sans-serif;
+    text-wrap: nowrap;
+    animation: boot 20s  infinite;
+
 }
 
 @keyframes top {
@@ -87,7 +94,53 @@ header{
 
     }
 }
+.kuby{
+    position: relative;
+    background-color: var(--color-secundario);
+    height: 150px;
+    clip-path: ellipse(80% 100% at 50% 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.fotoPerfil{
+    position: absolute;
+    top: 100px;
+    height: 100px;
+    width: 100px;
+    padding: 4px;
+    border: solid 5px var(--color-secundario);
+    background-image: url(/assets/img/perfil.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+
+.descriotion{
+    margin-top: 50px;
+    color: var(--color-cuarto);
+    width: 100%;
+    text-align: center;
+}
+.descriotion>h1{
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-size: 24px;
+    font-weight: 800;
+    font-style: ;
+}
+.descriotion>p{
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: ;
+}
 
 /* Main */
 
@@ -104,52 +157,10 @@ section{
     width: 100%;
     display: grid;
     place-items: center;
-
-}
-.section01{
-    height: 150px;
-    background-color: var(--color-primario);
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.fotoPerfil{
-    position: absolute;
-    top: -70px;
-    height: 100px;
-    width: 100px;
-    border: solid 5px var(--color-secundario);
-    background-image: url(/assets/img/perfil.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    z-index: 10;
 }
 
-
-.descriotion{
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-}
-.descriotion>h1{
-    font-family: "EB Garamond", serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: italic;
-}
-.descriotion>p{
-    font-family: "EB Garamond", serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    padding: 10px;
-}
-.descriotion{
-
+.redes{
+    background-color: var(--color-secundario);
 }
 .conteinerRedes{
     margin: 10px;
@@ -189,10 +200,10 @@ section{
     border: solid ;
     border-radius: 5rem;
     text-decoration: none;
-    color: aliceblue;
+    color: var(--color-cuarto);
 }
 .link>a:hover{
-    background-color: red;
+    background-color:   v;
 }
 
 /*QR*/
@@ -225,6 +236,7 @@ section{
     color: #000;
 }
 .card>img{
+    aspect-ratio: 1;
     height: 8rem;
 }
 
