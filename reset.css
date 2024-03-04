@@ -75,7 +75,7 @@ header{
     0%{
     }
     100%{
-        transform: translateX(1000px);
+        transform: translateX(100px);
     }
 }
 
@@ -83,7 +83,7 @@ header{
     0%{
     }
     100%{
-        transform: translateX(-1000px);
+        transform: translateX(-100px);
 
     }
 }
