@@ -21,7 +21,9 @@
 body{
     margin: 0; 
     display: grid;
-    place-items: center;    
+    place-items: center;  
+    background-color: var(--color-primario);
+  
     min-height: 100vh;/* maximo tamaño de pantalla arregla el calculo de cuando sale el teclado */        
 }
         
@@ -50,7 +52,6 @@ header{
     top: 0;
     height: 200px;
     z-index: -1;
-    background-color: var(--color-primario);
     font-family: "Anton", sans-serif;
     font-size: 80px;
     text-wrap: nowrap;
