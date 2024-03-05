@@ -57,6 +57,7 @@ header{
     height: 200px;
     font-family: "Anton", sans-serif;
     text-wrap: nowrap;
+    white-space: nowrap;
     animation: boot 20s  infinite;
 
 }
