@@ -65,7 +65,8 @@ header{
     top: 70px;
     height: 200px;
     font-family: "Anton", sans-serif;
-    text-wrap: nowrap;
+/*     text-wrap: nowrap;
+ */    white-space: nowrap;
     animation: top 20s  infinite;
 }
 .letrasTres{
