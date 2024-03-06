@@ -4,7 +4,7 @@
     --color-secundario:#8D9C63 ;
     --color-terciario:#C2D2B0 ;
     --color-cuarto:#101916 ;
-    --color-quinto: #E9EEEA;
+    --color-quinto: #586a44;
     
 }
 
@@ -22,7 +22,7 @@ body{
     margin: 0; 
     display: grid;
     place-items: center;  
-    background-color: var(--color-primario);
+    background-color: var(--color-quinto);
   
     min-height: 100vh;/* maximo tamaño de pantalla arregla el calculo de cuando sale el teclado */        
 }
@@ -45,45 +45,62 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: end;
-    height: 300px;
+    height: 400px;
     width: 100%;
     font-size: 50px;
     color: var(--color-terciario);
     overflow: hidden;
 }
-.letras{
+.conteinerLetras{
     position: absolute;
     top: 0;
-    height: 200px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    filter: blur(1px);
+
+}
+.conteinerLetras>span{
+    font-weight: 500;
+    opacity: .5;
+    padding: .4rem;
+}
+.letras{
+    
+    height: 100%;
     font-family: "Anton", sans-serif;
     white-space: nowrap;
-    animation: boot 20s  infinite;
+    animation: boot 50s ease-in alternate infinite;
 
 }
 .letrasDOS{
-    position: absolute;
-    top: 70px;
-    height: 200px;
+    height: 100%;
     font-family: "Anton", sans-serif;
     white-space: nowrap;
-    animation: top 20s  infinite;
+    animation: top 50s ease-in alternate infinite;
 }
 .letrasTres{
-    position: absolute;
-    top: 130px;
-    height: 200px;
+    height: 100%;
     font-family: "Anton", sans-serif;
     white-space: nowrap;
+    animation: boot 50s ease-in alternate  infinite;
+}
 
-    animation: boot 20s  infinite;
-
+.conteinerLetras>span>strong{
+    color: var(--color-primario);
+    background-color: var(--color-secundario);
+    padding-inline: 1rem;
+    border-radius: .2rem;
 }
 
 @keyframes top {
     0%{
     }
     100%{
-        transform: translateX(100px);
+        transform: translateX(1500px);
     }
 }
 
@@ -91,14 +108,14 @@ header{
     0%{
     }
     100%{
-        transform: translateX(-100px);
+        transform: translateX(-1500px);
 
     }
 }
 .containerHeader{
     position: relative;
     background-color: var(--color-primario);
-    height: 150px;
+    height: 200px;
     width: 100%;
     clip-path: ellipse(80% 100% at 50% 100%);
     display: flex;
@@ -106,49 +123,77 @@ header{
     align-items: center;
     justify-content: end;
 }
+
 .containerDescrition{
     position: absolute;
     top: 50px;
 }
+.redes{
+    padding: .5rem 0;
+}
 .descriotion{
     text-align: center;
+    font-family: sans-serif;
+    opacity: .9;
 }
 .descriotion>h1{
-    font-family: "EB Garamond", serif;
-    font-optical-sizing: auto;
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 500;
 }
 .descriotion>p{
-    font-family: "EB Garamond", serif;
-    font-optical-sizing: auto;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .conteinerRedes{
+    position: absolute;
+    bottom: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
+
 }
 .conteinerRedes>a>div{
     width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8B9C77;
+    border-radius: 50%;
 }
 .conteinerRedes>a>div>img{
     width: 40px;
+    opacity: .9;
+    animation: salto 2s ;
+
+}
+.conteinerRedes>a>div:hover{
     background-color: var(--color-terciario);
 
-    border-radius: 50%;
-/*     transition: all .3s step-start;
- */}
+}
 .conteinerRedes>a>div>img:hover{
-    scale: 1.1;
 
+}
+#GitHub{
+    animation:rotate-horizontal-center 0.5s 5s ;
 }
 
 
+@keyframes rotate-horizontal-center{
+    0%{
+        transform:rotateX(0)
+    }
+    100%{
+        transform:rotateX(-360deg)
+    }
+}
+  
+  
+
 .fotoPerfil{
     position: absolute;
-    top: 100px;
+    top: 150px;
     height: 100px;
     width: 100px;
     padding: 4px;
@@ -160,6 +205,11 @@ header{
     border-radius: 50%;
     z-index: 10;
 }
+.fotoPerfil:hover{
+    cursor: pointer;
+    box-shadow: inset  1px 1px 1px 100px #0000007f;
+    
+}
 
 /* Main */
 
@@ -168,7 +218,8 @@ main{
     display: grid;
     place-items: center;
     width: 100%;
-    background-color:var(--color-);
+    background-color:var(--color-primario);
+    overflow: hidden;
 
 }
 
@@ -179,28 +230,32 @@ section{
 }
 
 .link{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    gap: 10px;
+    width: 600px;
     height: 100%;
-    padding: 1rem;
+    padding: 2rem;
 }
 
-
-.link>a{
-    text-align: center;
-    width: 300px;
-    margin-bottom: .5rem;
+.link>a>div{
+    border: solid var(--color-cuarto);
     padding: 1.5rem;
-    font-family: "Anton", sans-serif;
-    font-size: 35px;
-    text-decoration: none;
+    width: 200px;
     border-radius: .2rem;
     background-color: var(--color-secundario);
     color: var(--color-primario);
     transition: all .3s ease;
+    text-align: center;
 }
-.link>a:hover{
+.link>a{
+    font-family: "Anton", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.link>a>div:hover{
     background-color:#a8b87c;
 }
 
@@ -221,16 +276,20 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    
 
 }
 
 .cardUno{
     text-align: center;
+    padding-right: 2rem;
 }
 .cardUno>strong{
     font-size: 40px;
 }
 .cardUno>a{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
     color: #000;
 }
 .card>img{
@@ -256,8 +315,15 @@ footer{
 
 .info{
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.info>span{
+    opacity: .9;
 }
 .info>a{
     text-decoration: none;
+    font-weight: bolder;
     color: #000;
 }
+
+/* Animaciones */
