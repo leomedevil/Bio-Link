@@ -129,6 +129,9 @@ header{
     top: 50px;
 }
 .redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: .5rem 0;
 }
 .descriotion{
@@ -146,7 +149,7 @@ header{
 }
 .conteinerRedes{
     position: absolute;
-    bottom: 5px;
+    bottom: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -215,8 +218,10 @@ header{
 
 main{
     position: relative;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     background-color:var(--color-primario);
     overflow: hidden;
@@ -230,9 +235,10 @@ section{
 }
 
 .link{
-    display: grid;
-    place-items: center;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
     width: 600px;
     height: 100%;
@@ -274,25 +280,36 @@ section{
     padding: 1rem;
     background-color: var(--color-primario);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    
-
+    justify-content: center;
+}
+.card>div{
+    width: 100%;
 }
 
 .cardUno{
     text-align: center;
-    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
 }
-.cardUno>strong{
+.cardUno>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.cardUno>div>strong{
     font-size: 40px;
 }
-.cardUno>a{
-    font-family: 'Courier New', Courier, monospace;
+.card>div>a{
+    font-family:monospace;
     font-weight: bold;
     color: #000;
 }
-.card>img{
+.cardUno>div>img{
     aspect-ratio: 1;
     height: 8rem;
 }
