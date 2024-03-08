@@ -11,7 +11,8 @@
 *{
     box-sizing:border-box;/*Calcula los borde margin y pading de de la caja*/
     min-width:0px;/*areglar desvordamiento de grid y flex*/
-    
+    font-family: Times;
+
 }
 ::selection{
     color:var(--color-primario) ;
@@ -23,7 +24,6 @@ body{
     display: grid;
     place-items: center;  
     background-color: var(--color-quinto);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     min-height: 100vh;/* maximo tamaño de pantalla arregla el calculo de cuando sale el teclado */        
 }
         
@@ -124,32 +124,35 @@ header{
     justify-content: end;
 }
 
-.containerDescrition{
-    position: absolute;
-    top: 50px;
-}
 .redes{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: .5rem 0;
+}
+.containerDescrition{
+    position: absolute;
+    top: 50px;
 }
 .descriotion{
     text-align: center;
     font-family: sans-serif;
     opacity: .9;
+    
 }
 .descriotion>h1{
     font-size: 24px;
-    font-weight: 500;
+    font-weight: bold;
 }
 .descriotion>p{
+    text-align: center;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: lighter;
+    font-style: italic;
+    margin-top: 10px;
 }
 .conteinerRedes{
     position: absolute;
-    bottom: 30px;
+    bottom: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -284,6 +287,8 @@ section{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    white-space: nowrap;
+
 }
 .linkImg>img{
     height: 100%;
@@ -303,7 +308,8 @@ section{
 .card{
     height: 200px;
     min-width: 400px;
-    padding: 1rem;
+    padding: .5rem;
+    margin-inline: 20px;
     background-color: var(--color-primario);
     display: flex;
     align-items: center;
@@ -320,7 +326,7 @@ section{
     align-items: center;
     justify-content: center;
     height: 100%;
-    margin: 20px;
+    margin: 30px;
 }
 .cardUno>strong{
     font-size: 40px;
@@ -343,9 +349,10 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color:var(--color-primario);
     font-weight: 600;
-    padding: 20px 0px 10px 20px;
+    padding: 20px 0px 1px 0px;
 }
 
 .info{
