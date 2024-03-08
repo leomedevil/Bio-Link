@@ -287,7 +287,6 @@ section{
     align-items: center;
     justify-content: center;
     gap: 20px;
-    white-space: nowrap;
 
 }
 .linkImg>img{
@@ -352,7 +351,7 @@ footer{
     justify-content: center;
     background-color:var(--color-primario);
     font-weight: 600;
-    padding: 20px 0px 1px 0px;
+    padding: 20px 0px 10px 0px;
 }
 
 .info{
