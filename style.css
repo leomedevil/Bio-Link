@@ -322,10 +322,10 @@ section{
 .cardUno{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     height: 100%;
-    margin: 30px;
+    padding: 30px;
 }
 .cardUno>strong{
     font-size: 40px;
