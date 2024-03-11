@@ -1,10 +1,10 @@
 
 :root{
-    --color-primario:#455633;
-    --color-secundario:#8D9C63 ;
-    --color-terciario:#C2D2B0 ;
-    --color-cuarto:#101916 ;
-    --color-quinto: #586a44;
+    --color-primario:#F5E6C5;
+    --color-secundario: #9F886F;
+    --color-terciario:#D78B30;
+    --color-cuarto: #3F422E;
+    --color-quinto: ;
     
 } 
 
@@ -16,14 +16,14 @@
 }
 ::selection{
     color:var(--color-primario) ;
-    background-color: var(--color-secundario);
+    background-color: var(--color-terciario);
 }
 
 body{
     margin: 0; 
     display: grid;
     place-items: center;  
-    background-color: var(--color-quinto);
+    background-color: var(--color-secundario);
     min-height: 100vh;/* maximo tamaño de pantalla arregla el calculo de cuando sale el teclado */        
 }
         
@@ -48,7 +48,7 @@ header{
     height: 400px;
     width: 100%;
     font-size: 50px;
-    color: var(--color-terciario);
+    color: var(--color-primario);
     overflow: hidden;
 }
 .conteinerLetras{
@@ -60,7 +60,7 @@ header{
     align-items: center;
     justify-content: center;
     padding: 5px;
-    filter: blur(1px);
+    filter: blur(5px);
 
 }
 .conteinerLetras>span{
@@ -90,8 +90,8 @@ header{
 }
 
 .conteinerLetras>span>strong{
-    color: var(--color-primario);
-    background-color: var(--color-secundario);
+    color: var(--color-secundario);
+    background-color: var(--color-primario);
     padding-inline: 1rem;
     border-radius: .2rem;
 }
@@ -137,6 +137,7 @@ header{
     text-align: center;
     font-family: sans-serif;
     opacity: .9;
+    color: var(--color-cuarto);
     
 }
 .descriotion>h1{
@@ -146,7 +147,7 @@ header{
 .descriotion>p{
     text-align: center;
     font-size: 16px;
-    font-weight: lighter;
+    font-weight:bold;
     font-style: italic;
     margin-top: 10px;
 }
@@ -165,13 +166,14 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #8B9C77;
     border-radius: 50%;
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .conteinerRedes>a>div>img{
     width: 40px;
     opacity: .9;
-    animation: salto 2s ;
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
 
 }
 .conteinerRedes>a>div:hover{
@@ -179,7 +181,7 @@ header{
 
 }
 .conteinerRedes>a>div>img:hover{
-
+    width: 44px;
 }
 #GitHub{
     animation:rotate-horizontal-center 0.5s 5s ;
@@ -199,17 +201,20 @@ header{
 
 .fotoPerfil{
     position: absolute;
-    top: 150px;
+    top: 140px;
     height: 100px;
     width: 100px;
     padding: 4px;
-    border: solid 5px var(--color-secundario);
+    border: solid 5px var(--color-cuarto);
+    background-color: var(--color-cuarto);
     background-image: url(/assets/img/perfil.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
     z-index: 10;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
 }
 .fotoPerfil:hover{
     cursor: pointer;
@@ -228,7 +233,6 @@ main{
     width: 100%;
     background-color:var(--color-primario);
     overflow: hidden;
-
 }
 
 section{
@@ -246,16 +250,17 @@ section{
     width: 600px;
     height: 100%;
     padding: 2rem;
+    
 }
 
 .linkTex{
-    border: solid var(--color-cuarto);
+    border: solid var(--color-secundario);
     padding: 1rem;
     min-width: 200px;
     border-radius: .5rem;
-    background-color: var(--color-secundario);
+    background-color:;
     color: var(--color-cuarto);
-    transition: all .3s ease;
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -266,7 +271,7 @@ section{
     text-decoration: none;
 }
 .link>a>div:hover{
-    background-color:#a8b87c;
+    background-color: #2e2e2e12;
 }
 .link>a>div>h1{
 }
@@ -276,7 +281,7 @@ section{
 .linkImg{
     height: 100px;
     display: flex;
-    border: solid var(--color-cuarto);
+    border: solid var(--color-secundario);
     padding: 1rem;
     min-width: 200px;
     border-radius: .5rem;
@@ -301,13 +306,11 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top:10px solid var(--color-secundario);
-    border-bottom:10px solid var(--color-secundario);
+
 }
 .card{
     height: 200px;
     min-width: 400px;
-    padding: .5rem;
     margin-inline: 20px;
     background-color: var(--color-primario);
     display: flex;
@@ -326,14 +329,25 @@ section{
     justify-content: center;
     height: 100%;
     padding: 20px;
+    
 }
 .cardUno>strong{
     font-size: 40px;
+
 }
 .cardUno>a{
+    font-size: medium;
     font-family:monospace;
     font-weight: bold;
     color: #000;
+
+}
+.cardDos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: var(--color-primario);
 }
 #qr{
     height: 8rem;
@@ -350,6 +364,7 @@ footer{
     align-items: center;
     justify-content: center;
     background-color:var(--color-primario);
+    
     font-weight: 600;
     padding: 20px 0px 10px 0px;
 }
