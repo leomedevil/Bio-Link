@@ -307,7 +307,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
 }
 .card{
     height: 200px;
@@ -318,6 +318,7 @@ section{
     align-items: center;
     justify-content: space-between;
     gap: 50px;
+    backdrop-filter: blur(50px);
 }
 .card>div{
     width: 100%;
@@ -340,7 +341,7 @@ section{
     font-size: medium;
     font-family:monospace;
     font-weight: bold;
-    color: #000;
+    color: #000000a7;
 
 }
 .cardDos{
