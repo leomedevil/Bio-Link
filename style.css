@@ -184,6 +184,9 @@ header{
 .conteinerRedes>a>div>img:hover{
     width: 44px;
 }
+.conteinerRedes>a>div:active{
+    scale: .8;
+}
 #GitHub{
     animation:rotate-horizontal-center 0.5s 5s ;
 }
@@ -273,6 +276,9 @@ section{
 }
 .link>a>div:hover{
     background-color: #2e2e2e12;
+}
+.link>a>div:active{
+    scale: .8;
 }
 .link>a>div>h1{
 }
