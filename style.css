@@ -60,7 +60,7 @@ header{
     align-items: center;
     justify-content: center;
     padding: 5px;
-    filter: blur(5px);
+    filter: blur(4px);
 
 }
 .conteinerLetras>span{
