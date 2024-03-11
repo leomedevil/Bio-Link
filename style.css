@@ -343,6 +343,9 @@ section{
     font-size: 40px;
 
 }
+.cardUno>strong>span{
+    color: var(--color-terciario);
+}
 .cardUno>a{
     font-size: medium;
     font-family:monospace;
